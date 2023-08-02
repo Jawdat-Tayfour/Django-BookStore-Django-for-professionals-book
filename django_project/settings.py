@@ -10,9 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-from pathlib import Path
-
 from environs import Env # new
+from pathlib import Path
 env = Env() # new
 env.read_env() # new
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -160,3 +159,6 @@ ACCOUNT_EMAIL_REQUIRED = True # new
 ACCOUNT_UNIQUE_EMAIL = True # new
 
 DEFAULT_FROM_EMAIL = "admin@djangobookstore.com" # new
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
